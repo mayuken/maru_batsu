@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+//fontfamily
+@font-face {
+    font-family: "";
+    src: url("");
+  }
+  
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+
+//fontcolor
+$main-color:;
+$sub-color:;
+$sub-color2:;
+$accent-color:;
+$font-color:;
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div, td, th {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "NotoSansJP-Regular";
+  font-size: ;
+  background-color:;
+  color:;
+
+  a {
+    text-decoration: none;
+  }
+  
+  
+  li {
+      list-style: none;
+  }
+
+  .bold {
+    font-weight: bold;
+  }  
+
+  h1 {
+    font-size: ;
+}
+
+  h2 {
+    font-size: ;
+}
+
+  .container {
+    max-width: ;
+    margin: 0 auto;
+    text-align: ;
+  }
+
+}/*body設定*/
+
+
+
+/*ここから下はPC用*/
+
+@media (min-width: 960px) {
+    .container {
+        max-width: vw;
+    }
+
+}
+
+
+
+/*ここから下はタブレット用*/
+
+@media (min-width: 560px) and (max-width: 959px) {
+    .container {
+        max-width: vw;
+    }
+
+}
+
+
+
+/*ここから下はスマートフォン用*/
+
+@media (max-width: 559px) {
+    .container {
+        max-width: vw;
+    }
+
+}

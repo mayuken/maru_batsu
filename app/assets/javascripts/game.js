@@ -4,28 +4,12 @@ $(document).on('click', '.block', function(){
   let block=$(this).html();
   if (click <9 && block === "　"){
     if (click % 2 === 0){
-      $(this).html("○")
+      $(this).addClass("maru").html("○");
     }else{
-      $(this).html("×")
+      $(this).addClass("batsu").html("×");
     }
     click++;
   }
-
-  // let objs = {
-  //   obj1 : $('.one'),
-  //   obj2 : $('.two'),
-  //   obj3 : $('.three'),
-  //   obj4 : $('.four'),
-  //   obj5 : $('.five'),
-  //   obj6 : $('.six'),
-  //   obj7 : $('.seven'),
-  //   obj8 : $('.eight'),
-  //   obj9 : $('.nine'),
-  // };
-
-  // $.each(objs, function(index, object){
-  // let judge = object.html();
-  // });
   
   // thタグを代入
   let obj1=$('.one');
@@ -63,20 +47,6 @@ $(document).on('click', '.block', function(){
 
   // 判定の配列
   let judges=[juds1, juds2, juds3, juds4, juds5, juds6, juds7, juds8]
-
-  // // ○の配列
-  // let maru1= "○";
-  // let maru2= "○";
-  // let maru3= "○";
-  // let marus={maru1, maru2, maru3};
-  // // ×の配列
-  // let batsu1= "×";
-  // let batsu2= "×";
-  // let batsu3= "×";
-  // let batsus={batsu1, batsu2, batsu3};
-  // // 空の配列
-  // let kara= "　";
-  // let karas={kara, kara, kara};
 
   function maru_judge(judge, index, array){
     return (judge == "○")

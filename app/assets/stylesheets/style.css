@@ -74,17 +74,19 @@ body .container {
   table td {
     border: 0.2vw solid darkgray;
     empty-cells: show;
+    height: 11.6vw;
+    width: 11.6vw;
   }
   table .maru {
-    font-size: 7vw;
+    font-size: 6vw;
     background-color: #F197A9;
-    padding-top: 0.5vw;
+    padding-top: 1.5vw;
     width: 11.6vw;
-    height: 11.1vw;
+    height: 10.15vw;
     display: none;
   }
   table .batsu {
-    display: none;
+    display: block;
     font-size: 8vw;
     background-color: #B7D1F3;
     width: 11.6vw;

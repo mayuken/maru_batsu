@@ -2,11 +2,13 @@ let click=0;
 
 $(document).on('click', '.block', function(){
   let block=$(this).html();
-  if (click <9 && block === "　"){
+  if (click <9 && block === "　　　　　　　<br>　　　　　　　<br>　　　　　　　<br>　　　　　　　<br>　　　　　　　<br>"){
     if (click % 2 === 0){
       $(this).addClass("maru").html("○");
+      $('.instruct').html("先攻が○、後攻が×だよ！<br>次は後攻だよ！×の場所を選んでね！");
     }else{
       $(this).addClass("batsu").html("×");
+      $('.instruct').html("先攻が○、後攻が×だよ！<br>次は先攻だよ！○の場所を選んでね！");
     }
     click++;
   }
@@ -56,11 +58,15 @@ $(document).on('click', '.block', function(){
     return (judge == "×")
   }
 
+  let num=0;
+
   $.each(judges, function(index, judge){
-    if(judge.every(maru_judge)){
+    if(judge.every(maru_judge) && num < 1){
       alert("先攻の勝ち");
-    }else if(judge.every(batsu_judge)){
+      return num++;
+    }else if(judge.every(batsu_judge) && num < 1){
       alert("後攻の勝ち");
+      return num++;
     }
   });
  

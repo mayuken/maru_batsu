@@ -62,10 +62,12 @@ $(document).on('click', '.block', function(){
 
   $.each(judges, function(index, judge){
     if(judge.every(maru_judge) && num < 1){
-      alert("先攻の勝ち");
+      $('main').append('<div class="zone"><div class="kekka"><h3>先攻の勝ち！</h3><img src="assets/pose_win_girl.png" art="勝ち！"></div></div>');
+      $('.zone').fadeIn('slow');
       return num++;
     }else if(judge.every(batsu_judge) && num < 1){
-      alert("後攻の勝ち");
+      $('main').append('<div class="zone"><div class="kekka"><h3>後攻の勝ち！</h3><img src="assets/pose_win_boy.png" art="勝ち！"></div></div>');
+      $('.zone').fadeIn('slow');
       return num++;
     }
   });

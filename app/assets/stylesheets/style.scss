@@ -99,6 +99,7 @@ body {
         empty-cells: show;
         height: 8.4vw;
         width: 8.4vw;
+        box-sizing: border-box;
 
       }
 
@@ -108,11 +109,11 @@ body {
         padding-top: 1.4vw;
         width: 8.4vw;
         height: 6.9vw;
-        display: block;
+        display: none;
       }
 
       .batsu {
-        display: none;
+        display: block;
         font-size: 5.5vw;
         background-color: #B7D1F3;
         padding-bottom: 0.5vw;

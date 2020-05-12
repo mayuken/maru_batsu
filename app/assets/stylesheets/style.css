@@ -85,15 +85,15 @@ body .container {
     padding-top: 1.4vw;
     width: 8.4vw;
     height: 6.9vw;
-    display: none;
+    display: block;
   }
   table .batsu {
-    display: block;
-    font-size: 6vw;
+    display: none;
+    font-size: 5.5vw;
     background-color: #B7D1F3;
     padding-bottom: 0.5vw;
     width: 8.4vw;
-    height: 7.8vw;
+    height: 7.9vw;
   }
   footer p {
     margin-top: 2vw;

@@ -1,17 +1,17 @@
 
-let click=0;
+let tap=0;
 
 $(document).on('click', '.block', function(){
   let block=$(this).html();
-  if (click <9 && block === "　　　　　<br>　　　　　<br>　　　　　<br>"){
-    if (click % 2 === 0){
+  if (tap <9 && block === "　　　　　<br>　　　　　<br>　　　　　<br>"){
+    if (tap % 2 === 0){
       $(this).addClass("maru").html("○");
       $('.instruct').html("次は後攻だよ！×の場所を選んでね！");
     }else{
       $(this).addClass("batsu").html("×");
       $('.instruct').html("次は先攻だよ！○の場所を選んでね！");
     }
-    click++;
+    tap++;
   }
   
   // thタグを代入

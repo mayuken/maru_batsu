@@ -1,4 +1,3 @@
-$(window).load(function(){
 
 let click=0;
 
@@ -84,5 +83,4 @@ $(document).on('click', '.block', function(){
     }
   });
  
-});
 });

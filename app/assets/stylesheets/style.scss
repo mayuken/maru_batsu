@@ -2,8 +2,8 @@
 
 //fontfamily
 @font-face {
-    font-family: "";
-    src: url("");
+    font-family: "nikkyou";
+    src: url("../fonts/NikkyouSans-B6aV.ttf");
   }
   
 
@@ -54,11 +54,14 @@ body {
   }  
 
   h1 {
-    font-size: 3vw;
+    font-size: 3.5vw;
+    letter-spacing: 0.2vw;
+    font-family: "nikkyou";
 }
 
   h2 {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
+    font-family: "NotoSansJP-Regular";
 }
 
   .container {
@@ -72,7 +75,6 @@ body {
 
 /*ここから下はPC用*/
 
-@media (min-width: 960px) {
     .container {
         max-width: 80%;
         background-color: $sub-color;
@@ -89,16 +91,19 @@ body {
     table {
       border: 0px solid red;
       margin: 0 auto;
+  
+    
       border-collapse: separate;
       border-spacing: 1vw;
       margin-top: 1vw;
+      table-layout: fixed;
 
 
       td {
         border: 0.2vw solid  $sub-color2;
         empty-cells: show;
-        height: 8.4vw;
-        width: 8.4vw;
+        height: 8.5vw;
+        width: 8.5vw;
         box-sizing: border-box;
 
       }
@@ -107,23 +112,24 @@ body {
         font-size: 4vw;
         background-color: #F197A9;
         padding-top: 1.4vw;
-        width: 8.4vw;
-        height: 6.9vw;
-        display: none;
+        width: 100%;
+        height: 100%;
+        display: block;
       }
 
       .batsu {
-        display: block;
-        font-size: 5.5vw;
+        display: none;
+        font-size: 5.31vw;
         background-color: #B7D1F3;
-        padding-bottom: 0.5vw;
-        width: 8.4vw;
-        height: 7.9vw;
+        padding-bottom: 0vw;
+        width: 100%;
+        height: 100%;
       }
     }
 
     footer p {
       margin-top: 2vw;
+      font-family: "nikkyou";
 
     }
 
@@ -161,9 +167,6 @@ body {
 
   }
 
-
-
-}//min960
 
 
 

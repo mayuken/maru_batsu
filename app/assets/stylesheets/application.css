@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ @font-face {
+  font-family: "nikkyou";
+  src: url("/assets/NikkyouSans-B6aV.ttf");
+}

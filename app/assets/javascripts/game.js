@@ -1,3 +1,5 @@
+$(window).load(function(){
+
 let click=0;
 
 $(document).on('click', '.block', function(){
@@ -46,7 +48,7 @@ $(document).on('click', '.block', function(){
   // 斜め一列の判定
   let juds7=[jud1, jud5, jud9];
   let juds8=[jud3, jud5, jud7];
-
+  let juds9=[jud1, jud2, jud3, jud4, jud5, jud6, jud7, jud8, jud9];
   // 判定の配列
   let judges=[juds1, juds2, juds3, juds4, juds5, juds6, juds7, juds8]
 
@@ -58,18 +60,29 @@ $(document).on('click', '.block', function(){
     return (judge == "×")
   }
 
+  function obj_judge(judge, index, array){
+    return (judge != "　　　　　<br>　　　　　<br>　　　　　<br>")
+  }
+
   let num=0;
 
   $.each(judges, function(index, judge){
     if(judge.every(maru_judge) && num < 1){
-      $('main').append('<div class="zone"><div class="kekka"><h3>先攻の勝ち！</h3><img src="assets/pose_win_girl.png" art="勝ち！"></div></div>');
+      $('main').append('<div class="zone"><div class="kekka"><h3>先攻の勝ち！</h3><img src="assets/pose_win_girl.png" art="勝ち！"><a class="back" href="#">もう一回！</a></div></div>');
       $('.zone').fadeIn('slow');
+      setTimeout("location.reload(false)",3000);
       return num++;
     }else if(judge.every(batsu_judge) && num < 1){
-      $('main').append('<div class="zone"><div class="kekka"><h3>後攻の勝ち！</h3><img src="assets/pose_win_boy.png" art="勝ち！"></div></div>');
+      $('main').append('<div class="zone"><div class="kekka"><h3>後攻の勝ち！</h3><img src="assets/pose_win_boy.png" art="勝ち！"><a class="back" href="#">もう一回！</a></div></div>');
       $('.zone').fadeIn('slow');
+      setTimeout("location.reload(false)",3000);
       return num++;
+    }else if(juds9.every(obj_judge)){
+      $('main').append('<div class="zone"><div class="kekka"><h3>引き分け！</h3><a class="back" href="#">もう一回！</a></div></div>');
+      $('.zone').fadeIn('slow');
+      setTimeout("location.reload(false)",3000);
     }
   });
  
+});
 });
